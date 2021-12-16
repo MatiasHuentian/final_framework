@@ -9,7 +9,7 @@ class JwtAuth{
     protected $key;
 
     public function __construct(){
-        $this->key = 'm1-cl4v3-35-pr!v4d4.';
+        $this->key = 'papalapapiricoipi';
     }
 
     public function singup($email, $password, $getToken=null){
