@@ -16,8 +16,7 @@ class UserController extends Controller
 
         $email = (!is_null($json) && isset($params->email)) ? $params->email : null;
         $name = (!is_null($json) && isset($params->name)) ? $params->name : null;
-        $surname = (!is_null($json) && isset($params->surname)) ? $params->surname : null;
-        $role = 'ADMIN';
+        // $role = 'ADMIN';
         $password = (!is_null($json) && isset($params->password)) ? $params->password : null;
 
         if(!is_null($email) && !is_null($name) && !is_null($password)){
@@ -25,8 +24,7 @@ class UserController extends Controller
             $user = new User();
             $user->email = $email;
             $user->name = $name;
-            $user->surname = $surname;
-            $user->role = $role;
+            // $user->role = $role;
 
             $pwd = hash('sha256', $password);
             $user->password = $pwd;

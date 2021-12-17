@@ -94,7 +94,7 @@ class ProductController extends Controller
                 $response = array(
                     'status' => 'success',
                     'code' => 200,
-                    'message' => 'Libro guardado',
+                    'message' => 'Producto encontrado',
                     'data' => $product
                 );
             }
@@ -133,7 +133,7 @@ class ProductController extends Controller
                 );
             }else{
                 //crear product
-                $product = new Product();
+                $product = Product::find($product_id);
                     // $product->user_id = $user->sub;
                     $product->name          = $params->name;
                     $product->description   = $params->description;
@@ -175,7 +175,7 @@ class ProductController extends Controller
                 $response = array(
                     'status' => 'success',
                     'code' => 200,
-                    'message' => 'Libro guardado',
+                    'message' => 'Producto eliminado correctamente',
                     'data' => $product
                 );
             }
